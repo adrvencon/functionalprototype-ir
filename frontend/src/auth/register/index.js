@@ -13,7 +13,8 @@ export default function Register() {
   const registerFormRef = useRef();
 
   function handleSubmit({ values }) {
-    window.location.href = "/dashboardMock";
+    alert('Email sent! Please check your inbox for the PIN.');
+    window.location.href = "/";
   }
   const linkStyle = {
     color: '#4F200D',
