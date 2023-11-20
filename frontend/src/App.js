@@ -49,6 +49,8 @@ import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import DashboardMock from "./dashboardMock";
 import RiceOperations from "./admin/riceOperations/RiceOperations";
+import RiceDeposit from "./riceOperations/riceDeposit";
+import RiceWithdrawalForm from "./riceOperations/riceWithdrawal";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -141,11 +143,13 @@ function App() {
   if (!jwt) {
     publicRoutes = (
       <>
-        <Route path="/dashboardMock" element={<DashboardMock />} />    
+        <Route path="/dashboardMock" element={<DashboardMock />} />
+        <Route path="/riceDeposit" element={<RiceDeposit/>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/riceOperations" exact={true} element={<RiceOperations/>} />
+        <Route path="/riceOperations" element={<RiceOperations/>} />
+        <Route path="/riceWithdrawal" element={<RiceWithdrawalForm/>} />
       </>
     )
   } else {
@@ -154,6 +158,11 @@ function App() {
         {/* <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}        
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/riceDeposit" element={<RiceDeposit/>} />
+        <Route path="/riceWithdrawal" element={<RiceWithdrawalForm/>} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboardMock" element={<DashboardMock />} />
+        <Route path="/riceOperations" element={<RiceOperations/>} />
       </>
     )
   }
