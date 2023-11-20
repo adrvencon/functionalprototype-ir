@@ -48,6 +48,7 @@ import ConsultationEditClinicOwner from "./clinicOwner/consultations/Consultatio
 import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import DashboardMock from "./dashboardMock";
+import RiceOperations from "./admin/riceOperations/RiceOperations";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -144,6 +145,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/riceOperations" exact={true} element={<RiceOperations/>} />
       </>
     )
   } else {
