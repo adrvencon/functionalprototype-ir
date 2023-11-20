@@ -2,35 +2,19 @@ import { formValidators } from "../../../validators/formValidators";
 
 export const registerFormClinicOwnerInputs = [
   {
-    tag: "Username",
-    name: "username",
+    tag: "Full Name",
+    name: "name",
     type: "text",
     defaultValue: "",
     isRequired: true,
     validators: [formValidators.notEmptyValidator],
   },
   {
-    tag: "Password",
-    name: "password",
-    type: "password",
-    defaultValue: "",
-    isRequired: true,
-    validators: [formValidators.notEmptyValidator],
-  },
-  {
-    tag: "First Name",
-    name: "firstName",
+    tag: "Corporative Email",
+    name: "email",
     type: "text",
     defaultValue: "",
     isRequired: true,
     validators: [formValidators.notEmptyValidator],
-  },
-  {
-    tag: "Last Name",
-    name: "lastName",
-    type: "text",
-    defaultValue: "",
-    isRequired: true,
-    validators: [formValidators.notEmptyValidator],
-  },
+  }
 ];

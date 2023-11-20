@@ -47,6 +47,7 @@ import ConsultationListClinicOwner from "./clinicOwner/consultations/Consultatio
 import ConsultationEditClinicOwner from "./clinicOwner/consultations/ConsultationEditClinicOwner";
 import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
+import DashboardMock from "./dashboardMock";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -138,9 +139,11 @@ function App() {
   })
   if (!jwt) {
     publicRoutes = (
-      <>        
+      <>
+        <Route path="/dashboardMock" element={<DashboardMock />} />    
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
       </>
     )
   } else {
