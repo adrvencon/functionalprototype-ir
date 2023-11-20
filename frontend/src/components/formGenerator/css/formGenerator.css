@@ -28,7 +28,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  border: 1px solid var(--main-button-hover-dark-color);
+  border: 1px solid #000;
 }
 
 .class-form > * {
@@ -60,7 +60,7 @@ select.class-form-input {
   padding: 0.6em 0.3em;
   border: none;
   outline: none;
-  border-bottom: 1px solid var(--main-button-hover-dark-color);
+  border-bottom: 1px solid #000;
   background-color: transparent;
 }
 
@@ -70,7 +70,7 @@ textarea.class-form-input {
   font-size: 1rem;
   color: var(--color-input);
   padding: 0.6em 0.3em;
-  border: 1px solid var(--main-button-hover-dark-color);
+  border: 1px solid #000;
   outline: none;
   background-color: transparent;
   resize: none;
@@ -92,7 +92,7 @@ textarea.class-form-input {
 .files-group > label {
   transform: translateY(-15px) scale(0.7);
   transform-origin: top left;
-  color: var(--main-button-hover-dark-color);
+  color: #000;
   cursor: pointer;
 }
 

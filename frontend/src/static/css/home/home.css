@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/home_background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../images/06dd48b969084ab19f8e40fb83e5ab76.png');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@
 
 .hero-div{
     background-color: rgba(255, 255, 255, 0.3);
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 25px;
     backdrop-filter: blur(10px);
     display: flex;

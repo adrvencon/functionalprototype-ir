@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'american-typewriter'; /*a name to be used later*/
-    src: url('./static/fonts/American\ Typewriter\ Bold.ttf'); /*URL to font*/
+    src: url('./static/fonts/Nexa-Heavy.ttf'); /*URL to font*/
 }
 
 * {

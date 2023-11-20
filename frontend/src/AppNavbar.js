@@ -142,10 +142,10 @@ function AppNavbar() {
 
     return (
         <div>
-            <Navbar expand="md" dark color="dark">
+            <Navbar expand="md" dark color="transparent">
                 <NavbarBrand href="/">
-                    <img alt="logo" src="/logo1-recortado.png" style={{ height: 40, width: 40 }} />
-                    PetClinic
+                    <img alt="logo" src="/5bbc97180bc67a02c98d9595.png" style={{ height: 40, width: 40 }} />
+                    Arroceros del Bajo Guadalquivir
                 </NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} className="ms-2" />
                 <Collapse isOpen={!collapsed} navbar>
