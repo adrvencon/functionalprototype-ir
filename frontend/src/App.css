@@ -42,3 +42,43 @@
   margin-left: 20px;
 }
 
+
+.link-button {
+  display: block;
+  width: 200px; /* Ancho deseado */
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #25313d; 
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #5fb300; 
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+
