@@ -15,7 +15,7 @@ export default function dashboardMock(){
         <div className="home-page-container">
             <div className="hero-div">
                 <h1>Arroceros Del Bajo Guadalquivir</h1>
-                <h2>Sociedad Cooperativa Andaluza El Reboso</h2>         
+                <h2>Sociedad Cooperativa Andaluza El Reboso</h2>  
             </div>
         </div>
     );

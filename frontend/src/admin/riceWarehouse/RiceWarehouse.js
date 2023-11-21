@@ -2,46 +2,44 @@ import { useEffect, useState } from "react";
 import tokenService from "../../services/token.service";
 import getErrorModal from "../../util/getErrorModal";
 import { Button, ButtonGroup, Table } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function RiceWarehouse() {
 
 const itemsPerPage = 10; // Cambiado a 10 elementos por página
-const [currentPage, setCurrentPage] = useState(1);
-const [message, setMessage] = useState(null);
-const [visible, setVisible] = useState(false);
 
-const indexOfLastGame = currentPage * itemsPerPage;
-const indexOfFirstGame = indexOfLastGame - itemsPerPage;
+    const [currentPage, setCurrentPage] = useState(1);
+    const [message, setMessage] = useState(null);
+    const [visible, setVisible] = useState(false);
+    const navigate = useNavigate();
+    const [selectedRow, setSelectedRow] = useState(null);
 
-
-
-const prevPage = () => {
-    if (currentPage > 1) {
-        setCurrentPage(currentPage - 1);
-    }
-};
+    const indexOfLastGame = currentPage * itemsPerPage;
+    const indexOfFirstGame = indexOfLastGame - itemsPerPage;
 
 
-const paginationStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: '10px',
-};
+    const prevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
 
-const paginationText = {
-    marginRight: '10px',
-};
 
-const opButtons = {
-    display: 'grid',
-    gridTemplateColumns: '1fr', // Two columns with equal width
-    gap: '10px', // Adjust the gap as needed for separation
-    justifyContent: 'flex-end', // Align to the right
-    marginTop: '10px',
-    marginLeft: '400px'
-};
+    const paginationStyle = {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: '10px',
+    };
+
+    const paginationText = {
+        marginRight: '10px',
+    };
+
+    const handleRowClick = (rowId) => {
+        navigate(`/riceDeposit`)    // Usar `` en vez de '' para que no se acumule la URL
+        setSelectedRow(rowId);
+    };
 
 
 
@@ -104,22 +102,23 @@ const op7 =
 
 const operationsList = [op1, op2, op3, op4, op5, op6, op7];
 
-const totalPages = Math.ceil(operationsList.length / itemsPerPage);
+    const totalPages = Math.ceil(operationsList.length / itemsPerPage);
 
-const nextPage = () => {
-    if (currentPage < totalPages) {
-        setCurrentPage(currentPage + 1);
-    }
-};
+    const nextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
 
-const modal = getErrorModal(setVisible, visible, message);
+    const modal = getErrorModal(setVisible, visible, message);
 
 return (
     <div>
         <div className="home-page-container">
-            <div className="auth-page-container">
-                <h1 className="text-center">Rice Warehouses</h1>
+            <div className="hero-div" style={{ padding: '40px', marginTop: '50px' }}>
+                <h1 className="text-center">Rice Operations</h1>
                 {modal}
+
                 <div className="button-container">
                     <div className="left-buttons">
                         <div className="search-bar-container">
@@ -128,7 +127,7 @@ return (
                         </div>
                     </div>
                     <div className="right-buttons">
-                        <Button color="success" className="newWithdrawal">New Variety</Button>
+                        <Button color="success" className="button-with-plus newWithdrawal" tag={Link} to="/riceVariety"> New Variety </Button>
                     </div>
                 </div>
 
@@ -137,24 +136,35 @@ return (
                         <thead>
                             <tr>
                                 <th width="10%" className="text-center">
-                                    Name
+                                    Variety
                                 </th>
-                                <th width="50%" className="text-center">
+                                <th width="20%" className="text-center">
                                     Industry
                                 </th>
                                 <th width="10%" className="text-center">
-                                    KG
+                                    Quantity
                                 </th>
                                 <th width="10%" className="text-center">
-                                    Price per KG
+                                    Price/KG
                                 </th>
                                 <th width="10%" className="text-center">
                                     Location
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>{operationsList}</tbody>
+                        <tbody>
+                            {operationsList.map((operation, index) => (
+                                <tr
+                                    key={index}
+                                    onClick={() => handleRowClick(index + 1)}
+                                    style={{ backgroundColor: selectedRow === index + 1 ? '#e0e0e0' : 'transparent', cursor: 'pointer' }}
+                                >
+                                    {operation.props.children}
+                                </tr>
+                            ))}
+                        </tbody>
                     </Table>
+
                     <div style={paginationStyle}>
                         <div style={paginationText}>
                             <p>Page {currentPage} of {totalPages}</p>
@@ -168,6 +178,7 @@ return (
                             </Button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
