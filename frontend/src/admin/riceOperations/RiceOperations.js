@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import tokenService from "../../services/token.service";
 import getErrorModal from "../../util/getErrorModal";
 import { Button, ButtonGroup, Table } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function RiceOperations() {
 
@@ -10,10 +10,11 @@ export default function RiceOperations() {
     const [currentPage, setCurrentPage] = useState(1);
     const [message, setMessage] = useState(null);
     const [visible, setVisible] = useState(false);
+    const navigate = useNavigate();
+    const [selectedRow, setSelectedRow] = useState(null);
 
     const indexOfLastGame = currentPage * itemsPerPage;
     const indexOfFirstGame = indexOfLastGame - itemsPerPage;
-
 
 
     const prevPage = () => {
@@ -34,13 +35,9 @@ export default function RiceOperations() {
         marginRight: '10px',
     };
 
-    const opButtons = {
-        display: 'grid',
-        gridTemplateColumns: '1fr', // Two columns with equal width
-        gap: '10px', // Adjust the gap as needed for separation
-        justifyContent: 'flex-end', // Align to the right
-        marginTop: '10px',
-        marginLeft: '400px'
+    const handleRowClick = (rowId) => {
+        navigate(`/riceDeposit`)    // Usar `` en vez de '' para que no se acumule la URL
+        setSelectedRow(rowId);
     };
 
 
@@ -123,20 +120,11 @@ export default function RiceOperations() {
 
     return (
         <div>
-            <div className="auth-page-background-container">
-                <div className="auth-page-container">
+            <div className="home-page-container">
+                <div className="hero-div" style={{ padding: '40px', marginTop: '40px' }}>
                     <h1 className="text-center">Rice Operations</h1>
                     {modal}
 
-                    {/*<div style={opButtons}>
-                        <Button color="success" className="button-with-plus newWithdrawal"> New Withdrawal </Button>
-                        <Button color="success" className="button-with-plus newDeposit"> New Deposit </Button>
-                    </div>
-
-                    <div class="search-bar-container">
-                        <input type="text" placeholder="Search..." class="search-input" />
-                        <button class="search-button">Search</button>
-                    </div>*/}
                     <div className="button-container">
                         <div className="left-buttons">
                             <div className="search-bar-container">
@@ -145,8 +133,8 @@ export default function RiceOperations() {
                             </div>
                         </div>
                         <div className="right-buttons">
-                            <Button color="success" className="newWithdrawal">New Withdrawal</Button>
-                            <Button color="success" className="newDeposit">New Deposit</Button>
+                            <Button color="success" className="button-with-plus newWithdrawal" tag={Link} to="/riceWithdrawal"> New Withdrawal </Button>
+                            <Button color="success" className="button-with-plus newDeposit" tag={Link} to="/riceDeposit"> New Deposit </Button>
                         </div>
                     </div>
 
@@ -174,8 +162,19 @@ export default function RiceOperations() {
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>{operationsList}</tbody>
+                            <tbody>
+                                {operationsList.map((operation, index) => (
+                                    <tr
+                                        key={index}
+                                        onClick={() => handleRowClick(index + 1)}
+                                        style={{ backgroundColor: selectedRow === index + 1 ? '#e0e0e0' : 'transparent', cursor: 'pointer' }}
+                                    >
+                                        {operation.props.children}
+                                    </tr>
+                                ))}
+                            </tbody>
                         </Table>
+
                         <div style={paginationStyle}>
                             <div style={paginationText}>
                                 <p>Page {currentPage} of {totalPages}</p>
@@ -189,6 +188,7 @@ export default function RiceOperations() {
                                 </Button>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

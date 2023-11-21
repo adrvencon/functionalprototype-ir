@@ -67,12 +67,11 @@
 .newDeposit {}
 
 .button-with-plus::before {
-    content: "+ ";
-    font-size: 1.2em;
-    /* Adjust the font size as needed */
-    margin-right: 4px;
-    /* Adjust the spacing between the plus sign and the text */
+  content: "+";
+  font-size: 1.1em; /* Adjust the font size as needed */
+  margin-right: 3px; /* Adjust the spacing between the symbol and the text */
 }
+
 
 
 .search-bar-container {
@@ -80,14 +79,12 @@
     align-items: center;
     margin-top: 10px;
 }
-
 .search-input {
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 .search-button {
     padding: 8px 12px;
     margin-left: 8px;
@@ -108,31 +105,42 @@
     align-items: center;
     margin-top: 10px;
 }
-
 .left-buttons {
     display: flex;
     align-items: center;
 }
-
 .right-buttons {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-left: 120px;
+    gap: 8px;
 }
-
 .search-bar-container {
     display: flex;
     align-items: center;
     margin-right: 8px;
-    /* Adjust the margin to move the left container more to the left */
+    margin-top: 41px;
 }
-
 .search-input {
     margin-right: 2px;
 }
-
 /* Add margin between the new withdrawal and new deposit buttons if needed */
 .right-buttons Button {
     margin-top: 8px;
+}
+
+
+.selected-row {
+  background-color: #e0e0e0; /* or any other color for highlighting */
+}
+.pointer-cursor {
+  cursor: pointer;
+}
+.table-cell {
+  padding: 8px; /* Adjust padding as needed */
+}
+tr:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
 }
