@@ -131,6 +131,15 @@
 }
 
 
+.updateOrdelete-buttons {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+  margin-left: 0px;
+  gap: 8px;
+}
+
+
 .selected-row {
   background-color: #e0e0e0; /* or any other color for highlighting */
 }

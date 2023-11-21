@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from "reactstrap";
 
 export default function SingleRiceOperation() {
     const [partner, setPartner] = useState('');
@@ -55,6 +56,13 @@ export default function SingleRiceOperation() {
             <div className="hero-div" style={{ padding: '40px', marginTop: '40px' }}>
                 <h1>Rice Operation</h1>
                 <h3>Details of operation with ID "1"</h3>
+
+                <div className="button-container">
+                    <div className="updateOrdelete-buttons">
+                        <Button color="success" className="newWithdrawal"> Update </Button>
+                        <Button color="danger" className="newDeposit"> Delete </Button>
+                    </div>
+                </div>
 
                 <form onSubmit={handleFormSubmit} style={{ marginTop: '30px' }}>
                     <div style={rowStyle}>
