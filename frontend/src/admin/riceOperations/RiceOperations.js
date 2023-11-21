@@ -13,10 +13,6 @@ export default function RiceOperations() {
     const navigate = useNavigate();
     const [selectedRow, setSelectedRow] = useState(null);
 
-    const indexOfLastGame = currentPage * itemsPerPage;
-    const indexOfFirstGame = indexOfLastGame - itemsPerPage;
-
-
     const prevPage = () => {
         if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
