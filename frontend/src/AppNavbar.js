@@ -152,10 +152,10 @@ function AppNavbar() {
                         {showAdditionalElements && (
                         <>
                             <NavItem>
-                            <NavLink style={{ color: "white" }} tag={Link} to="/clinics">Additional Option 1</NavLink>
+                            <NavLink style={{ color: "white" }} tag={Link} to="/selection">Selection Screen</NavLink>
                             </NavItem>
                             <NavItem>
-                            <NavLink style={{ color: "white" }} tag={Link} to="/owners">Additional Option 2</NavLink>
+                            <NavLink style={{ color: "white" }} tag={Link} to="/procedures">Operations</NavLink>
                             </NavItem>
                             {/* Add more additional options as needed */}
                         </>
