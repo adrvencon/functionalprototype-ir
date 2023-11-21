@@ -32,7 +32,7 @@ export default function RiceOperations() {
     };
 
     const handleRowClick = (rowId) => {
-        navigate(`/riceDeposit`)    // Usar `` en vez de '' para que no se acumule la URL
+        navigate("" + rowId)    // Usar `` en vez de '' para que no se acumule la URL
         setSelectedRow(rowId);
     };
 
@@ -44,7 +44,7 @@ export default function RiceOperations() {
             <td className="text-center">{"John Doe"}</td>
             <td className="text-center">{"Brown"}</td>
             <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
+            <td className="text-center">{"90 %"}</td>
             <td className="text-center">{"5 %"}</td>
         </tr>
     const op2 =

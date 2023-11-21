@@ -49,11 +49,13 @@ import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import DashboardMock from "./dashboardMock";
 import RiceOperations from "./admin/riceOperations/RiceOperations";
+import SingleRiceOperation from "./admin/riceOperations/SingleRiceOperation"
 import RiceDeposit from "./riceOperations/riceDeposit";
 import RiceWithdrawalForm from "./riceOperations/riceWithdrawal";
 import RiceWarehouse from "./admin/riceWarehouse/RiceWarehouse";
 import ScreenSelection from "./selection";
 import OperationSelection from "./operationSelection";
+
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -152,6 +154,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/riceOperations" element={<RiceOperations/>} />
+        <Route path="/riceOperations/:id" element={<SingleRiceOperation/>} />
         <Route path="/riceWithdrawal" element={<RiceWithdrawalForm/>} />
         <Route path="/riceWarehouse" element={<RiceWarehouse/>} />
         
@@ -168,6 +171,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboardMock" element={<DashboardMock />} />
         <Route path="/riceOperations" element={<RiceOperations/>} />
+        <Route path="/riceOperations/:id" element={<SingleRiceOperation/>} />
         <Route path="/riceWarehouse" element={<RiceWarehouse/>} />
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />
