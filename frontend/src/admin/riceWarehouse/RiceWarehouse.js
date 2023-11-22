@@ -116,7 +116,7 @@ return (
     <div>
         <div className="home-page-container">
             <div className="hero-div" style={{ padding: '40px', marginTop: '50px' }}>
-                <h1 className="text-center">Rice Operations</h1>
+                <h1 className="text-center">Rice Warehouses</h1>
                 {modal}
 
                 <div className="button-container">
