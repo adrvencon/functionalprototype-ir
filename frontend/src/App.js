@@ -163,13 +163,10 @@ function App() {
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />  
         <Route path="/partners" element={<Partners/>} />
-<<<<<<< HEAD
         <Route path="/createPartner" element={<CreatePartner/>} />
         <Route path="/partners/:id" element={<SinglePartner/>} />
-        
-=======
->>>>>>> c8aef9f7c04fe98ea8f8e2479535bf31141c0d4b
       </>
+  
     )
   } else {
     userRoutes = (
