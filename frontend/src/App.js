@@ -158,8 +158,9 @@ function App() {
         <Route path="/riceOperations/:id" element={<SingleRiceOperation/>} />
         <Route path="/riceWithdrawal" element={<RiceWithdrawalForm/>} />
         <Route path="/riceWarehouse" element={<RiceWarehouse/>} />
+        <Route path="/selection" element={<ScreenSelection/>} />
+        <Route path="/procedures" element={<OperationSelection/>} />  
         <Route path="/partners" element={<Partners/>} />
-        
       </>
     )
   } else {
