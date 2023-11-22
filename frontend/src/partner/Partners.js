@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import tokenService from "../../services/token.service";
-import getErrorModal from "../../util/getErrorModal";
+//import getErrorModal from "../../util/getErrorModal";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -112,14 +111,14 @@ export default function Partners() {
         }
     };
 
-    const modal = getErrorModal(setVisible, visible, message);
+    //const modal = getErrorModal(setVisible, visible, message);
 
     return (
         <div>
             <div className="home-page-container">
                 <div className="hero-div" style={{ padding: '40px', marginTop: '40px' }}>
                     <h1 className="text-center">Rice Operations</h1>
-                    {modal}
+                    
 
                     <div className="button-container">
                         <div className="left-buttons">
