@@ -56,6 +56,8 @@ import RiceWarehouse from "./admin/riceWarehouse/RiceWarehouse";
 import ScreenSelection from "./selection";
 import OperationSelection from "./operationSelection";
 import Partners from "./partner/Partners";
+import CreatePartner from "./partner/CreatePartner";
+import SinglePartner from "./partner/SinglePartner";
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -159,6 +161,8 @@ function App() {
         <Route path="/riceWithdrawal" element={<RiceWithdrawalForm/>} />
         <Route path="/riceWarehouse" element={<RiceWarehouse/>} />
         <Route path="/partners" element={<Partners/>} />
+        <Route path="/createPartner" element={<CreatePartner/>} />
+        <Route path="/partners/:id" element={<SinglePartner/>} />
         
       </>
     )
@@ -178,6 +182,8 @@ function App() {
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />
         <Route path="/partners" element={<Partners/>} />
+        <Route path="/createPartner" element={<CreatePartner/>} />
+        <Route path="/partners/:id" element={<SinglePartner/>} />
       </>
     )
   }
