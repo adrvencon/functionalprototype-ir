@@ -55,6 +55,7 @@ import RiceWithdrawalForm from "./riceOperations/riceWithdrawal";
 import RiceWarehouse from "./admin/riceWarehouse/RiceWarehouse";
 import ScreenSelection from "./selection";
 import OperationSelection from "./operationSelection";
+import Partners from "./partner/Partners";
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -157,6 +158,7 @@ function App() {
         <Route path="/riceOperations/:id" element={<SingleRiceOperation/>} />
         <Route path="/riceWithdrawal" element={<RiceWithdrawalForm/>} />
         <Route path="/riceWarehouse" element={<RiceWarehouse/>} />
+        <Route path="/partners" element={<Partners/>} />
         
       </>
     )
@@ -175,6 +177,7 @@ function App() {
         <Route path="/riceWarehouse" element={<RiceWarehouse/>} />
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />
+        <Route path="/partners" element={<Partners/>} />
       </>
     )
   }
