@@ -3,6 +3,76 @@ import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 
+
+
+
+const op1 =
+<tr key={"1"}>
+    <td className="text-center">{"John Doe"}</td>
+    <td className="text-center">{"12345678A"}</td>
+    <td className="text-center">{"625343519"}</td>
+    <td className="text-center">{"Doe@gmail.com"}</td>
+    <td className="text-center">{"1465 0100 72 2030876293"}</td>
+    <td className="text-center">{"7500"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op2 =
+<tr key={"2"}>
+    <td className="text-center">{"Jane Smith"}</td>
+    <td className="text-center">{"12345678B"}</td>
+    <td className="text-center">{"625343537"}</td>
+    <td className="text-center">{"Smith@gmail.com"}</td>
+    <td className="text-center">{" 1465 0100 72 2030876294"}</td>
+    <td className="text-center">{"5000"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op3 =
+<tr key={"3"}>
+    <td className="text-center">{"Michael Johnson"}</td>
+    <td className="text-center">{"12345678C"}</td>
+    <td className="text-center">{"625343350"}</td>
+    <td className="text-center">{"Mike@gmail.com"}</td>
+    <td className="text-center">{ "1465 0100 72 2030876295"}</td>
+    <td className="text-center">{ "4000"}</td>
+    <td className="text-center">{"Inactive"}</td>
+</tr>
+const op4 =
+<tr key={"4"}>
+    <td className="text-center">{"Emily Davis"}</td>
+    <td className="text-center">{"12345678D"}</td>
+    <td className="text-center">{"625347246"}</td>
+    <td className="text-center">{"Davis@gmail.com"}</td>
+    <td className="text-center">{"1465 0100 72 20308762936"}</td>
+    <td className="text-center">{"8400"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op5 =
+<tr key={"5"}>
+    <td className="text-center">{"David Wilson"}</td>
+    <td className="text-center">{"12345678E"}</td>
+    <td className="text-center">{"625374892"}</td>
+    <td className="text-center">{"Wilson@gmail.com"}</td>
+    <td className="text-center">{ "1465 0100 72 2030876297"}</td>
+    <td className="text-center">{ "4600"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op6 =
+<tr key={"6"}>
+    <td className="text-center">{"Susan Brown"}</td>
+    <td className="text-center">{"12345678F"}</td>
+    <td className="text-center">{"625343511"}</td>
+    <td className="text-center">{"Brown@gmail.com"}</td>
+    <td className="text-center">{"1465 0100 72 2030876298"}</td>
+    <td className="text-center">{"2345"}</td>
+    <td className="text-center">{"Inactive"}</td>
+</tr>
+
+
+global.partnerList.push(op1);
+global.partnerList.push(op2);
+global.partnerList.push(op3);
+global.partnerList.push(op4);
+
 export default function Partners() {
 
     const itemsPerPage = 10; // Cambiado a 10 elementos por página
@@ -35,73 +105,7 @@ export default function Partners() {
         setSelectedRow(rowId);
     };
 
-
-
-    const op1 =
-        <tr key={"1"}>
-            <td className="text-center">{"John Doe"}</td>
-            <td className="text-center">{"12345678A"}</td>
-            <td className="text-center">{"625343519"}</td>
-            <td className="text-center">{"Doe@gmail.com"}</td>
-            <td className="text-center">{"1465 0100 72 2030876293"}</td>
-            <td className="text-center">{"7500"}</td>
-            <td className="text-center">{"Active"}</td>
-        </tr>
-    const op2 =
-        <tr key={"2"}>
-            <td className="text-center">{"Jane Smith"}</td>
-            <td className="text-center">{"12345678B"}</td>
-            <td className="text-center">{"625343537"}</td>
-            <td className="text-center">{"Smith@gmail.com"}</td>
-            <td className="text-center">{" 1465 0100 72 2030876294"}</td>
-            <td className="text-center">{"5000"}</td>
-            <td className="text-center">{"Active"}</td>
-        </tr>
-    const op3 =
-        <tr key={"3"}>
-            <td className="text-center">{"Michael Johnson"}</td>
-            <td className="text-center">{"12345678C"}</td>
-            <td className="text-center">{"625343350"}</td>
-            <td className="text-center">{"Mike@gmail.com"}</td>
-            <td className="text-center">{ "1465 0100 72 2030876295"}</td>
-            <td className="text-center">{ "4000"}</td>
-            <td className="text-center">{"Inactive"}</td>
-        </tr>
-    const op4 =
-        <tr key={"4"}>
-            <td className="text-center">{"Emily Davis"}</td>
-            <td className="text-center">{"12345678D"}</td>
-            <td className="text-center">{"625347246"}</td>
-            <td className="text-center">{"Davis@gmail.com"}</td>
-            <td className="text-center">{"1465 0100 72 20308762936"}</td>
-            <td className="text-center">{"8400"}</td>
-            <td className="text-center">{"Active"}</td>
-        </tr>
-    const op5 =
-        <tr key={"5"}>
-            <td className="text-center">{"David Wilson"}</td>
-            <td className="text-center">{"12345678E"}</td>
-            <td className="text-center">{"625374892"}</td>
-            <td className="text-center">{"Wilson@gmail.com"}</td>
-            <td className="text-center">{ "1465 0100 72 2030876297"}</td>
-            <td className="text-center">{ "4600"}</td>
-            <td className="text-center">{"Active"}</td>
-        </tr>
-    const op6 =
-        <tr key={"6"}>
-            <td className="text-center">{"Susan Brown"}</td>
-            <td className="text-center">{"12345678F"}</td>
-            <td className="text-center">{"625343511"}</td>
-            <td className="text-center">{"Brown@gmail.com"}</td>
-            <td className="text-center">{"1465 0100 72 2030876298"}</td>
-            <td className="text-center">{"2345"}</td>
-            <td className="text-center">{"Inactive"}</td>
-        </tr>
-
-
-    const operationsList = [op1, op2, op3, op4, op5, op6];
-
-    const totalPages = Math.ceil(operationsList.length / itemsPerPage);
+    const totalPages = Math.ceil(global.partnerList.length / itemsPerPage);
 
     const nextPage = () => {
         if (currentPage < totalPages) {
@@ -159,7 +163,7 @@ export default function Partners() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {operationsList.map((operation, index) => (
+                                {global.partnerList.map((operation, index) => (
                                     <tr
                                         key={index}
                                         onClick={() => handleRowClick(index + 1)}

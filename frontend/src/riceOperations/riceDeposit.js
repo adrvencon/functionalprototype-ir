@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react';
 
 export default function RiceDepositForm() {
     const [partner, setPartner] = useState('');
@@ -20,7 +21,18 @@ export default function RiceDepositForm() {
             vehicleWeight,
             netMass,
         });
-        // Aquí puedes manejar la lógica para enviar los datos a la API o hacer lo que sea necesario con ellos
+        const op =
+            <tr key={"7"}>
+                <td className="text-center">{"29/11/2023"}</td>
+                <td className="text-center">{partner}</td>
+                <td className="text-center">{riceVariety}</td>
+                <td className="text-center">{"+ " + (cargoWeight - vehicleWeight) * (1 - humidity / 100) * (1 - (100 - purity) / 100) + " kg"}</td>
+                <td className="text-center">{purity}</td>
+                <td className="text-center">{humidity}</td>
+            </tr>
+        global.operationsList.unshift(op);
+        window.history.back();
+        console.log(global.operationsList);
     };
 
     const linkStyle = {
@@ -106,11 +118,11 @@ export default function RiceDepositForm() {
                         <label style={{ marginRight: '10px' }}>
                             Net Mass:
                         </label>
-                        <span style={{ color: '#4F200D', fontWeight: 'bold' }}>{(cargoWeight - vehicleWeight)*(1-humidity/100)*(1-(100-purity)/100)}</span>
+                        <span style={{ color: '#4F200D', fontWeight: 'bold' }}>{(cargoWeight - vehicleWeight) * (1 - humidity / 100) * (1 - (100 - purity) / 100)}</span>
                     </div>
-                    <div>
-                        <button type="submit">Deposit</button>
-                    </div>
+                    <button type="button" onClick={handleFormSubmit}>
+                        Deposit
+                    </button>
                 </form>
             </div>
         </div>

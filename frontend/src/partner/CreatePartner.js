@@ -34,7 +34,18 @@ export default function CreatePartner() {
             socialCap,
             council
         });
-        // Aquí puedes manejar la lógica para enviar los datos a la API o hacer lo que sea necesario con ellos
+        const op =
+        <tr key={"1"}>
+            <td className="text-center">{name}</td>
+            <td className="text-center">{nif}</td>
+            <td className="text-center">{phone}</td>
+            <td className="text-center">{email}</td>
+            <td className="text-center">{iban1}</td>
+            <td className="text-center">{socialCap}</td>
+            <td className="text-center">{council}</td>
+        </tr>
+        global.partnerList.unshift(op);
+        window.history.back();
     };
 
     const linkStyle = {

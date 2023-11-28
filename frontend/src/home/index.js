@@ -4,6 +4,9 @@ import '../static/css/home/home.css';
 import { Button } from 'reactstrap';
 import { Link, Route } from 'react-router-dom';
 
+global.operationsList = [];
+global.partnerList = [];
+
 export default function Home(){
 
     
