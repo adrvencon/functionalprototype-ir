@@ -87,19 +87,10 @@ export default function Partners() {
             <td className="text-center">{ "4600"}</td>
             <td className="text-center">{"Active"}</td>
         </tr>
-    const op6 =
-        <tr key={"6"}>
-            <td className="text-center">{"Susan Brown"}</td>
-            <td className="text-center">{"12345678F"}</td>
-            <td className="text-center">{"625343511"}</td>
-            <td className="text-center">{"Brown@gmail.com"}</td>
-            <td className="text-center">{"1465 0100 72 2030876298"}</td>
-            <td className="text-center">{"2345"}</td>
-            <td className="text-center">{"Inactive"}</td>
-        </tr>
+    
 
 
-    const operationsList = [op1, op2, op3, op4, op5, op6];
+    const operationsList = [op1, op2, op3, op4, op5];
 
     const totalPages = Math.ceil(operationsList.length / itemsPerPage);
 
