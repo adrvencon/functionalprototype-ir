@@ -105,7 +105,9 @@ export default function Partners() {
         setSelectedRow(rowId);
     };
 
+
     const totalPages = Math.ceil(global.partnerList.length / itemsPerPage);
+
 
     const nextPage = () => {
         if (currentPage < totalPages) {
