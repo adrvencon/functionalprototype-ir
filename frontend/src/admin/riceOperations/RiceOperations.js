@@ -4,6 +4,75 @@ import getErrorModal from "../../util/getErrorModal";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 
+const op1 =
+    <tr key={"1"}>
+        <td className="text-center">{"03/03/2023"}</td>
+        <td className="text-center">{"John Doe"}</td>
+        <td className="text-center">{"Brown"}</td>
+        <td className="text-center">{"+ 500 kg"}</td>
+        <td className="text-center">{"90 %"}</td>
+        <td className="text-center">{"5 %"}</td>
+    </tr>
+const op2 =
+    <tr key={"2"}>
+        <td className="text-center">{"06/03/2023"}</td>
+        <td className="text-center">{"Jane Smith"}</td>
+        <td className="text-center">{"White"}</td>
+        <td className="text-center">{"+ 800 kg"}</td>
+        <td className="text-center">{"90 %"}</td>
+        <td className="text-center">{"25 %"}</td>
+    </tr>
+const op3 =
+    <tr key={"3"}>
+        <td className="text-center">{"07/03/2023"}</td>
+        <td className="text-center">{"Michael Johnson"}</td>
+        <td className="text-center">{"Thin"}</td>
+        <td className="text-center">{"- 200 kg"}</td>
+        <td className="text-center">{ }</td>
+        <td className="text-center">{ }</td>
+    </tr>
+const op4 =
+    <tr key={"4"}>
+        <td className="text-center">{"07/03/2023"}</td>
+        <td className="text-center">{"Emily Davis"}</td>
+        <td className="text-center">{"White"}</td>
+        <td className="text-center">{"+ 500 kg"}</td>
+        <td className="text-center">{"100 %"}</td>
+        <td className="text-center">{"15 %"}</td>
+    </tr>
+const op5 =
+    <tr key={"5"}>
+        <td className="text-center">{"07/03/2023"}</td>
+        <td className="text-center">{"David Wilson"}</td>
+        <td className="text-center">{"White"}</td>
+        <td className="text-center">{"- 300 kg"}</td>
+        <td className="text-center">{ }</td>
+        <td className="text-center">{ }</td>
+    </tr>
+const op6 =
+    <tr key={"6"}>
+        <td className="text-center">{"07/03/2023"}</td>
+        <td className="text-center">{"Susan Brown"}</td>
+        <td className="text-center">{"Thin"}</td>
+        <td className="text-center">{"+ 500 kg"}</td>
+        <td className="text-center">{"100 %"}</td>
+        <td className="text-center">{"15 %"}</td>
+    </tr>
+const op7 =
+    <tr key={"7"}>
+        <td className="text-center">{"07/03/2023"}</td>
+        <td className="text-center">{"Kevin Lee"}</td>
+        <td className="text-center">{"Fat"}</td>
+        <td className="text-center">{"+ 600 kg"}</td>
+        <td className="text-center">{"100 %"}</td>
+        <td className="text-center">{"10 %"}</td>
+    </tr>
+
+console.log(global.operationsList);
+global.operationsList.push(op1);
+global.operationsList.push(op2);
+global.operationsList.push(op3);
+
 export default function RiceOperations() {
 
     const itemsPerPage = 10; // Cambiado a 10 elementos por página
@@ -36,75 +105,7 @@ export default function RiceOperations() {
         setSelectedRow(rowId);
     };
 
-
-
-    const op1 =
-        <tr key={"1"}>
-            <td className="text-center">{"03/03/2023"}</td>
-            <td className="text-center">{"John Doe"}</td>
-            <td className="text-center">{"Brown"}</td>
-            <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"90 %"}</td>
-            <td className="text-center">{"5 %"}</td>
-        </tr>
-    const op2 =
-        <tr key={"2"}>
-            <td className="text-center">{"06/03/2023"}</td>
-            <td className="text-center">{"Jane Smith"}</td>
-            <td className="text-center">{"White"}</td>
-            <td className="text-center">{"+ 800 kg"}</td>
-            <td className="text-center">{"90 %"}</td>
-            <td className="text-center">{"25 %"}</td>
-        </tr>
-    const op3 =
-        <tr key={"3"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Michael Johnson"}</td>
-            <td className="text-center">{"Thin"}</td>
-            <td className="text-center">{"- 200 kg"}</td>
-            <td className="text-center">{ }</td>
-            <td className="text-center">{ }</td>
-        </tr>
-    const op4 =
-        <tr key={"4"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Emily Davis"}</td>
-            <td className="text-center">{"White"}</td>
-            <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
-            <td className="text-center">{"15 %"}</td>
-        </tr>
-    const op5 =
-        <tr key={"5"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"David Wilson"}</td>
-            <td className="text-center">{"White"}</td>
-            <td className="text-center">{"- 300 kg"}</td>
-            <td className="text-center">{ }</td>
-            <td className="text-center">{ }</td>
-        </tr>
-    const op6 =
-        <tr key={"6"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Susan Brown"}</td>
-            <td className="text-center">{"Thin"}</td>
-            <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
-            <td className="text-center">{"15 %"}</td>
-        </tr>
-    const op7 =
-        <tr key={"7"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Kevin Lee"}</td>
-            <td className="text-center">{"Fat"}</td>
-            <td className="text-center">{"+ 600 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
-            <td className="text-center">{"10 %"}</td>
-        </tr>
-
-    const operationsList = [op1, op2, op3, op4, op5, op6, op7];
-
-    const totalPages = Math.ceil(operationsList.length / itemsPerPage);
+    const totalPages = Math.ceil(global.operationsList.length / itemsPerPage);
 
     const nextPage = () => {
         if (currentPage < totalPages) {
@@ -159,7 +160,7 @@ export default function RiceOperations() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {operationsList.map((operation, index) => (
+                                {global.operationsList.map((operation, index) => (
                                     <tr
                                         key={index}
                                         onClick={() => handleRowClick(index + 1)}

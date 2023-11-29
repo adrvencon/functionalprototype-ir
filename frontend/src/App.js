@@ -56,7 +56,10 @@ import RiceWarehouse from "./admin/riceWarehouse/RiceWarehouse";
 import ScreenSelection from "./selection";
 import OperationSelection from "./operationSelection";
 import Partners from "./partner/Partners";
-import Economics from "./economics/EconomicsSelection"
+import CreatePartner from "./partner/CreatePartner";
+import SinglePartner from "./partner/SinglePartner";
+import Vehicles from "./admin/vehicles/Vehicles";
+import Employees from "./employees/Employees";import Economics from "./economics/EconomicsSelection"
 import Invoices from "./economics/Invoices"
 
 
@@ -163,9 +166,14 @@ function App() {
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />  
         <Route path="/partners" element={<Partners/>} />
+        <Route path="/createPartner" element={<CreatePartner/>} />
+        <Route path="/partners/:id" element={<SinglePartner/>} />
+        <Route path="/vehicles" element={<Vehicles/>}/>
+        <Route path="/employees" element={<Employees/>}/>
         <Route path="/economics" element={<Economics/>} />
         <Route path="/invoices" element={<Invoices/>} />
       </>
+  
     )
   } else {
     userRoutes = (
@@ -185,6 +193,10 @@ function App() {
         <Route path="/partners" element={<Partners/>} />
         <Route path="/economics" element={<Economics/>} />
         <Route path="/invoices" element={<Invoices/>} />
+        <Route path="/createPartner" element={<CreatePartner/>} />
+        <Route path="/partners/:id" element={<SinglePartner/>} />
+        <Route path="/vehicles" element={<Vehicles/>}/>
+        <Route path="/employees" element={<Employees/>}/>
       </>
     )
   }

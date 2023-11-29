@@ -3,6 +3,76 @@ import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 
+
+
+
+const op1 =
+<tr key={"1"}>
+    <td className="text-center">{"John Doe"}</td>
+    <td className="text-center">{"12345678A"}</td>
+    <td className="text-center">{"625343519"}</td>
+    <td className="text-center">{"Doe@gmail.com"}</td>
+    <td className="text-center">{"1465 0100 72 2030876293"}</td>
+    <td className="text-center">{"7500"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op2 =
+<tr key={"2"}>
+    <td className="text-center">{"Jane Smith"}</td>
+    <td className="text-center">{"12345678B"}</td>
+    <td className="text-center">{"625343537"}</td>
+    <td className="text-center">{"Smith@gmail.com"}</td>
+    <td className="text-center">{" 1465 0100 72 2030876294"}</td>
+    <td className="text-center">{"5000"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op3 =
+<tr key={"3"}>
+    <td className="text-center">{"Michael Johnson"}</td>
+    <td className="text-center">{"12345678C"}</td>
+    <td className="text-center">{"625343350"}</td>
+    <td className="text-center">{"Mike@gmail.com"}</td>
+    <td className="text-center">{ "1465 0100 72 2030876295"}</td>
+    <td className="text-center">{ "4000"}</td>
+    <td className="text-center">{"Inactive"}</td>
+</tr>
+const op4 =
+<tr key={"4"}>
+    <td className="text-center">{"Emily Davis"}</td>
+    <td className="text-center">{"12345678D"}</td>
+    <td className="text-center">{"625347246"}</td>
+    <td className="text-center">{"Davis@gmail.com"}</td>
+    <td className="text-center">{"1465 0100 72 20308762936"}</td>
+    <td className="text-center">{"8400"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op5 =
+<tr key={"5"}>
+    <td className="text-center">{"David Wilson"}</td>
+    <td className="text-center">{"12345678E"}</td>
+    <td className="text-center">{"625374892"}</td>
+    <td className="text-center">{"Wilson@gmail.com"}</td>
+    <td className="text-center">{ "1465 0100 72 2030876297"}</td>
+    <td className="text-center">{ "4600"}</td>
+    <td className="text-center">{"Active"}</td>
+</tr>
+const op6 =
+<tr key={"6"}>
+    <td className="text-center">{"Susan Brown"}</td>
+    <td className="text-center">{"12345678F"}</td>
+    <td className="text-center">{"625343511"}</td>
+    <td className="text-center">{"Brown@gmail.com"}</td>
+    <td className="text-center">{"1465 0100 72 2030876298"}</td>
+    <td className="text-center">{"2345"}</td>
+    <td className="text-center">{"Inactive"}</td>
+</tr>
+
+
+global.partnerList.push(op1);
+global.partnerList.push(op2);
+global.partnerList.push(op3);
+global.partnerList.push(op4);
+
 export default function Partners() {
 
     const itemsPerPage = 10; // Cambiado a 10 elementos por página
@@ -36,74 +106,8 @@ export default function Partners() {
     };
 
 
+    const totalPages = Math.ceil(global.partnerList.length / itemsPerPage);
 
-    const op1 =
-        <tr key={"1"}>
-            <td className="text-center">{"03/03/2023"}</td>
-            <td className="text-center">{"John Doe"}</td>
-            <td className="text-center">{"Brown"}</td>
-            <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"90 %"}</td>
-            <td className="text-center">{"5 %"}</td>
-        </tr>
-    const op2 =
-        <tr key={"2"}>
-            <td className="text-center">{"06/03/2023"}</td>
-            <td className="text-center">{"Jane Smith"}</td>
-            <td className="text-center">{"White"}</td>
-            <td className="text-center">{"+ 800 kg"}</td>
-            <td className="text-center">{"90 %"}</td>
-            <td className="text-center">{"25 %"}</td>
-        </tr>
-    const op3 =
-        <tr key={"3"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Michael Johnson"}</td>
-            <td className="text-center">{"Thin"}</td>
-            <td className="text-center">{"- 200 kg"}</td>
-            <td className="text-center">{ }</td>
-            <td className="text-center">{ }</td>
-        </tr>
-    const op4 =
-        <tr key={"4"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Emily Davis"}</td>
-            <td className="text-center">{"White"}</td>
-            <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
-            <td className="text-center">{"15 %"}</td>
-        </tr>
-    const op5 =
-        <tr key={"5"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"David Wilson"}</td>
-            <td className="text-center">{"White"}</td>
-            <td className="text-center">{"- 300 kg"}</td>
-            <td className="text-center">{ }</td>
-            <td className="text-center">{ }</td>
-        </tr>
-    const op6 =
-        <tr key={"6"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Susan Brown"}</td>
-            <td className="text-center">{"Thin"}</td>
-            <td className="text-center">{"+ 500 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
-            <td className="text-center">{"15 %"}</td>
-        </tr>
-    const op7 =
-        <tr key={"7"}>
-            <td className="text-center">{"07/03/2023"}</td>
-            <td className="text-center">{"Kevin Lee"}</td>
-            <td className="text-center">{"Fat"}</td>
-            <td className="text-center">{"+ 600 kg"}</td>
-            <td className="text-center">{"100 %"}</td>
-            <td className="text-center">{"10 %"}</td>
-        </tr>
-
-    const operationsList = [op1, op2, op3, op4, op5, op6, op7];
-
-    const totalPages = Math.ceil(operationsList.length / itemsPerPage);
 
     const nextPage = () => {
         if (currentPage < totalPages) {
@@ -116,8 +120,8 @@ export default function Partners() {
     return (
         <div>
             <div className="home-page-container">
-                <div className="hero-div" style={{ padding: '40px', marginTop: '40px' }}>
-                    <h1 className="text-center">Rice Operations</h1>
+                <div className="hero-div" style={{ padding: '20px', marginTop: '30px', width: '60%' }}>
+                    <h1 className="text-center">Partners</h1>
                     
 
                     <div className="button-container">
@@ -128,8 +132,8 @@ export default function Partners() {
                             </div>
                         </div>
                         <div className="right-buttons">
-                            <Button color="success" className="button-with-plus newWithdrawal" tag={Link} to="/riceWithdrawal"> New Withdrawal </Button>
-                            <Button color="success" className="button-with-plus newDeposit" tag={Link} to="/riceDeposit"> New Deposit </Button>
+                        <Button color="success" className="button-with-plus newDeposit" tag={Link} to="/meeting"> See Meeting </Button>
+                            <Button color="success" className="button-with-plus newDeposit" tag={Link} to="/createPartner"> New Partner </Button>
                         </div>
                     </div>
 
@@ -138,27 +142,30 @@ export default function Partners() {
                             <thead>
                                 <tr>
                                     <th width="10%" className="text-center">
-                                        Date
-                                    </th>
-                                    <th width="50%" className="text-center">
-                                        Partner
+                                        Name
                                     </th>
                                     <th width="10%" className="text-center">
-                                        Variety
+                                        ID/NIF
                                     </th>
                                     <th width="10%" className="text-center">
-                                        Quantity
+                                        Phone
                                     </th>
                                     <th width="10%" className="text-center">
-                                        Purity
+                                        Email
                                     </th>
                                     <th width="10%" className="text-center">
-                                        Humidity
+                                        IBAN1
+                                    </th>
+                                    <th width="10%" className="text-center">
+                                        Social Capital
+                                    </th>
+                                    <th width="10%" className="text-center">
+                                        Council
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {operationsList.map((operation, index) => (
+                                {global.partnerList.map((operation, index) => (
                                     <tr
                                         key={index}
                                         onClick={() => handleRowClick(index + 1)}
