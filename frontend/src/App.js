@@ -59,8 +59,10 @@ import Partners from "./partner/Partners";
 import CreatePartner from "./partner/CreatePartner";
 import SinglePartner from "./partner/SinglePartner";
 import Vehicles from "./admin/vehicles/Vehicles";
-import Employees from "./employees/Employees";import Economics from "./economics/EconomicsSelection"
+import Employees from "./employees/Employees";
+import Economics from "./economics/EconomicsSelection"
 import Invoices from "./economics/Invoices"
+import ExploitationExpenses from "./economics/ExploitationExpenses";
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -172,6 +174,7 @@ function App() {
         <Route path="/employees" element={<Employees/>}/>
         <Route path="/economics" element={<Economics/>} />
         <Route path="/invoices" element={<Invoices/>} />
+        <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
       </>
   
     )
@@ -197,6 +200,7 @@ function App() {
         <Route path="/partners/:id" element={<SinglePartner/>} />
         <Route path="/vehicles" element={<Vehicles/>}/>
         <Route path="/employees" element={<Employees/>}/>
+        <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
       </>
     )
   }
