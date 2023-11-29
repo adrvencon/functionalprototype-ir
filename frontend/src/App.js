@@ -59,7 +59,7 @@ import Partners from "./partner/Partners";
 import CreatePartner from "./partner/CreatePartner";
 import SinglePartner from "./partner/SinglePartner";
 import Vehicles from "./admin/vehicles/Vehicles";
-
+import Employees from "./employees/Employees";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -167,6 +167,7 @@ function App() {
         <Route path="/createPartner" element={<CreatePartner/>} />
         <Route path="/partners/:id" element={<SinglePartner/>} />
         <Route path="/vehicles" element={<Vehicles/>}/>
+        <Route path="/employees" element={<Employees/>}/>
       </>
   
     )
@@ -188,6 +189,8 @@ function App() {
         <Route path="/partners" element={<Partners/>} />
         <Route path="/createPartner" element={<CreatePartner/>} />
         <Route path="/partners/:id" element={<SinglePartner/>} />
+        <Route path="/vehicles" element={<Vehicles/>}/>
+        <Route path="/employees" element={<Employees/>}/>
       </>
     )
   }
