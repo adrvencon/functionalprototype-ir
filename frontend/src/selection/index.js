@@ -29,7 +29,6 @@ function ScreenSelection() {
           <Link to="/products" className="link-button"><GoPackageDependents /> Products</Link>
         </div>
       </div>
-
       <Routes>
         <Route path="/riceWarehouse" element={<RiceWarehouse />} />
       </Routes>
