@@ -56,6 +56,8 @@ import RiceWarehouse from "./admin/riceWarehouse/RiceWarehouse";
 import ScreenSelection from "./selection";
 import OperationSelection from "./operationSelection";
 import Partners from "./partner/Partners";
+import Economics from "./economics/EconomicsSelection"
+import Invoices from "./economics/Invoices"
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -161,6 +163,8 @@ function App() {
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />  
         <Route path="/partners" element={<Partners/>} />
+        <Route path="/economics" element={<Economics/>} />
+        <Route path="/invoices" element={<Invoices/>} />
       </>
     )
   } else {
@@ -179,6 +183,8 @@ function App() {
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />
         <Route path="/partners" element={<Partners/>} />
+        <Route path="/economics" element={<Economics/>} />
+        <Route path="/invoices" element={<Invoices/>} />
       </>
     )
   }
