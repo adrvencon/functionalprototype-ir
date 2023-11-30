@@ -63,6 +63,7 @@ import Employees from "./employees/Employees";
 import Economics from "./economics/EconomicsSelection"
 import Invoices from "./economics/Invoices"
 import ExploitationExpenses from "./economics/ExploitationExpenses";
+import Meetings from "./meetings/meetings"
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -175,6 +176,7 @@ function App() {
         <Route path="/economics" element={<Economics/>} />
         <Route path="/invoices" element={<Invoices/>} />
         <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
+        <Route path="/meetings" element={<Meetings/>} />
       </>
   
     )
@@ -201,6 +203,7 @@ function App() {
         <Route path="/vehicles" element={<Vehicles/>}/>
         <Route path="/employees" element={<Employees/>}/>
         <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
+        <Route path="/meetings" element={<Meetings/>} />
       </>
     )
   }
