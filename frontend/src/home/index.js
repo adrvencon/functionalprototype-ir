@@ -6,6 +6,7 @@ import { Link, Route } from 'react-router-dom';
 
 global.operationsList = [];
 global.partnerList = [];
+global.productList = [];
 
 export default function Home(){
 

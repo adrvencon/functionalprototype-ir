@@ -58,6 +58,8 @@ import OperationSelection from "./operationSelection";
 import Partners from "./partner/Partners";
 import CreatePartner from "./partner/CreatePartner";
 import SinglePartner from "./partner/SinglePartner";
+import Products from "./products/index";
+import SingleProduct from "./products/SingleProduct";
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -165,6 +167,8 @@ function App() {
         <Route path="/partners" element={<Partners/>} />
         <Route path="/createPartner" element={<CreatePartner/>} />
         <Route path="/partners/:id" element={<SinglePartner/>} />
+        <Route path="/products" element={<Products/>} />
+        <Route path="/products/:id" element={<SingleProduct/>} />
       </>
   
     )
@@ -186,6 +190,8 @@ function App() {
         <Route path="/partners" element={<Partners/>} />
         <Route path="/createPartner" element={<CreatePartner/>} />
         <Route path="/partners/:id" element={<SinglePartner/>} />
+        <Route path="/products" element={<Products/>} />
+        <Route path="/products/:id" element={<SingleProduct/>} />
       </>
     )
   }
