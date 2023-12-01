@@ -66,6 +66,8 @@ import Economics from "./economics/EconomicsSelection"
 import Invoices from "./economics/Invoices"
 import ExploitationExpenses from "./economics/ExploitationExpenses";
 import Meetings from "./meetings/meetings"
+import FuelOperations from "./fuel";
+import ShareCapitalOperations from "./shareCapital";
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -181,6 +183,8 @@ function App() {
         <Route path="/invoices" element={<Invoices/>} />
         <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
         <Route path="/meetings" element={<Meetings/>} />
+        <Route path="/fuelOperations" element={<FuelOperations/>} />
+        <Route path="/shareCapitalOperations" element={<ShareCapitalOperations/>} />
       </>
   
     )
@@ -210,6 +214,8 @@ function App() {
         <Route path="/employees" element={<Employees/>}/>
         <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
         <Route path="/meetings" element={<Meetings/>} />
+        <Route path="/fuelOperations" element={<FuelOperations/>} />
+        <Route path="/shareCapitalOperations" element={<ShareCapitalOperations/>} />
       </>
     )
   }

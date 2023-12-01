@@ -22,8 +22,8 @@ function OperationSelection() {
         <div className="button-row">
           <Link to="/riceOperations" className="link-button"><FaBowlRice /> Rice </Link>
           <Link to="/products" className="link-button"> <GiFertilizerBag /> Products</Link>
-          <Link to="/fuel" className="link-button"><BsFillFuelPumpFill /> Fuel</Link>
-          <Link to="/shareCapital" className="link-button"> <CiMoneyCheck1 /> Share Capital</Link>
+          <Link to="/fuelOperations" className="link-button"><BsFillFuelPumpFill /> Fuel</Link>
+          <Link to="/shareCapitalOperations" className="link-button"> <CiMoneyCheck1 /> Share Capital</Link>
         </div>
       </div>
 

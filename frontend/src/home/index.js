@@ -7,6 +7,8 @@ import { Link, Route } from 'react-router-dom';
 global.operationsList = [];
 global.partnerList = [];
 global.productList = [];
+global.fuelOperationList = [];
+global.shareCapitalList = [];
 
 export default function Home(){
 
