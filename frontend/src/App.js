@@ -60,6 +60,12 @@ import CreatePartner from "./partner/CreatePartner";
 import SinglePartner from "./partner/SinglePartner";
 import Products from "./products/index";
 import SingleProduct from "./products/SingleProduct";
+import Vehicles from "./admin/vehicles/Vehicles";
+import Employees from "./employees/Employees";
+import Economics from "./economics/EconomicsSelection"
+import Invoices from "./economics/Invoices"
+import ExploitationExpenses from "./economics/ExploitationExpenses";
+import Meetings from "./meetings/meetings"
 
 
 function ErrorFallback({ error, resetErrorBoundary }) {
@@ -169,6 +175,12 @@ function App() {
         <Route path="/partners/:id" element={<SinglePartner/>} />
         <Route path="/products" element={<Products/>} />
         <Route path="/products/:id" element={<SingleProduct/>} />
+        <Route path="/vehicles" element={<Vehicles/>}/>
+        <Route path="/employees" element={<Employees/>}/>
+        <Route path="/economics" element={<Economics/>} />
+        <Route path="/invoices" element={<Invoices/>} />
+        <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
+        <Route path="/meetings" element={<Meetings/>} />
       </>
   
     )
@@ -188,10 +200,16 @@ function App() {
         <Route path="/selection" element={<ScreenSelection/>} />
         <Route path="/procedures" element={<OperationSelection/>} />
         <Route path="/partners" element={<Partners/>} />
+        <Route path="/economics" element={<Economics/>} />
+        <Route path="/invoices" element={<Invoices/>} />
         <Route path="/createPartner" element={<CreatePartner/>} />
         <Route path="/partners/:id" element={<SinglePartner/>} />
         <Route path="/products" element={<Products/>} />
         <Route path="/products/:id" element={<SingleProduct/>} />
+        <Route path="/vehicles" element={<Vehicles/>}/>
+        <Route path="/employees" element={<Employees/>}/>
+        <Route path="/exploitationExpenses" element={<ExploitationExpenses/>}/>
+        <Route path="/meetings" element={<Meetings/>} />
       </>
     )
   }

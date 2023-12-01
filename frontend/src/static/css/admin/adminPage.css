@@ -116,6 +116,14 @@
     margin-left: 120px;
     gap: 8px;
 }
+.right-buttons2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 41px;
+  margin-left: 180px;
+  gap: 8px;
+}
 .search-bar-container {
     display: flex;
     align-items: center;
